@@ -63,8 +63,14 @@
   box-shadow: 5px 5px 5px rgb(206, 204, 204);
 }
 
-.ToDoItem--button {
+.ToDoItem button:last-child {
   cursor: pointer;
+}
+
+/* hover is not working for some reason?! */
+
+.ToDoItem button:last-child:hover {
+  background-color: honeydew;
 }
 
 .ToDoItem--delete {
@@ -74,7 +80,6 @@
 
 .ToDoItem--done {
   color: lawngreen;
-  font-style: crossed;
 }
 
 .ToDoItem--pending {

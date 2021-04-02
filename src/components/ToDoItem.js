@@ -20,7 +20,7 @@ function ToDoItem({ name, isDone, onClickToDoRemove, onClickToDoToggle }) {
         onClick={handleDeleteButtonClick}
       />
 
-      <div className="Task">
+      <div className={`Task ${toDosForDone}`}>
         {isDone ? `${name} is pending` : `${name} is done`}
       </div>
       <button className="ToDoItem--button" onClick={handleToggleButtonClick}>
