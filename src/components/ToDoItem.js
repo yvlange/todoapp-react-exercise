@@ -1,3 +1,5 @@
+import { TiDeleteOutline } from "react-icons/ti";
+
 function ToDoItem({ name, isDone, onClickToDoRemove, onClickToDoToggle }) {
   function handleDeleteButtonClick() {
     onClickToDoRemove(name);
@@ -11,9 +13,13 @@ function ToDoItem({ name, isDone, onClickToDoRemove, onClickToDoToggle }) {
 
   return (
     <section className={`ToDoItem ${toDosForDone}`}>
-      <button className="ToDoItem--delete" onClick={handleDeleteButtonClick}>
-        x
-      </button>
+      <TiDeleteOutline
+        title="Delete"
+        size="1.5em"
+        className="ToDoItem--delete"
+        onClick={handleDeleteButtonClick}
+      />
+
       <div className="Task">
         {isDone ? `${name} is pending` : `${name} is done`}
       </div>
