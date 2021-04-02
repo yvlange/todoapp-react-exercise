@@ -4,8 +4,77 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-rows: [header] 80px [content] auto;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.ListItems {
+  list-style-type: none;
+}
+
+.Header {
+  grid-row: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hotpink;
+  color: lightgoldenrodyellow;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1rem;
+}
+
+.Header--form {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.AddButton {
+  cursor: pointer;
+}
+
+.AddButton:hover {
+  background-color: cornflowerblue;
+}
+
+.ToDoList {
+  grid-row: content;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding-top: 1em;
+}
+
+.ToDoItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid hotpink;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+}
+
+.ToDoItem--button {
+  cursor: pointer;
+}
+
+.ToDoItem--delete {
+  color: red;
+  cursor: pointer;
+}
+
+.ToDoItem--done {
+  color: lawngreen;
+  font-style: crossed;
+}
+
+.ToDoItem--pending {
+  color: coral;
 }
