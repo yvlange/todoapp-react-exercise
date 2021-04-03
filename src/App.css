@@ -9,7 +9,7 @@
 
 .App {
   display: grid;
-  grid-template-rows: [header] 80px [content] auto;
+  grid-template-rows: [header] 80px [content] auto [footer] 80px;
   justify-content: center;
   min-width: 320px;
   max-width: 60vh;

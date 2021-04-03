@@ -1,22 +1,25 @@
-.ToDoItem {
+.ToDoItem,
+.ToDoItem--pending {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   border: 4px solid #f20587;
+  color: #f20587;
   border-radius: 10px;
   padding: 0.5em 1em;
   margin: 0.5em;
-  box-shadow: 5px 5px 5px rgb(167, 162, 162);
+  box-shadow: 5px 5px 5px rgb(36, 201, 238);
   background-color: #e3e9e7;
 }
 
-.ToDoItem--content {
+/* .ToDoItem--content {
   display: flex;
   align-content: center;
   padding: 10px;
   margin: 10px;
-}
+} */
 
-.ToDoItem button:last-child {
+/* .ToDoItem button:last-child {
   cursor: pointer;
   background-color: #fdc0d0;
   color: #f20587;
@@ -29,7 +32,7 @@
 
 .ToDoItem button:last-child:hover {
   background-color: #f1ced8;
-}
+} */
 
 .ToDoItem--delete {
   color: #f20587;
@@ -41,6 +44,51 @@
   color: rgb(36, 201, 238);
 }
 
-.ToDoItem--pending {
+/* .ToDoItem--pending {
   color: #f20587;
+} */
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #fdc0d0;
+  color: #f20587;
+  border-color: #f20587;
+  border-radius: 20px;
+  height: 50px;
+  width: 50px;
+  font-size: 12px;
+}
+
+.edit-template {
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkbox-done {
+  padding: 10px;
+}
+
+.task-content {
+  text-align: center;
+  padding: 5px;
+}
+
+.todo-text {
+  border-radius: 5px;
+  margin: 5px;
+  height: 25px;
+  color: #f74ba9;
+  text-align: center;
+}
+
+.todo-label {
+  padding: 5px;
+  font-size: 12px;
 }
