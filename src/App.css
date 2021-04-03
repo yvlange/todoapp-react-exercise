@@ -4,84 +4,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 .App {
   display: grid;
   grid-template-rows: [header] 80px [content] auto;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-.ListItems {
-  list-style-type: none;
-}
-
-.Header {
-  grid-row: header;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f20587;
-  color: lightgoldenrodyellow;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 1rem;
-}
-
-.Header--form {
-  border-radius: 5px;
-  margin: 5px;
-}
-
-.AddButton {
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.AddButton:hover {
-  background-color: cornflowerblue;
-}
-
-.ToDoList {
-  grid-row: content;
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  padding-top: 1em;
-}
-
-.ToDoItem {
-  display: flex;
-  justify-content: space-between;
-  border: 4px solid #f20587;
-  border-radius: 10px;
-  padding: 0.5em 1em;
-  margin: 0.5em;
-  box-shadow: 5px 5px 5px rgb(206, 204, 204);
-}
-
-.ToDoItem button:last-child {
-  cursor: pointer;
-}
-
-/* hover is not working for some reason?! */
-
-.ToDoItem button:last-child:hover {
-  background-color: honeydew;
-}
-
-.ToDoItem--delete {
-  color: red;
-  cursor: pointer;
-}
-
-.ToDoItem--done {
-  color: lawngreen;
-}
-
-.ToDoItem--pending {
-  color: coral;
+  min-width: 320px;
+  max-width: 60vh;
 }

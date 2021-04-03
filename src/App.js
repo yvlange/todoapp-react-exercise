@@ -1,4 +1,7 @@
 import "./App.css";
+import "./styles/Header.css";
+import "./styles/ToDoList.css";
+import "./styles/ToDoItem.css";
 import Header from "./components/Header";
 import ToDoList from "./components/ToDoList";
 import { useState } from "react";
