@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { TiDeleteOutline } from "react-icons/ti";
 
 function ToDoItem({
   name,
@@ -43,34 +42,28 @@ function ToDoItem({
   );
   const viewTemplate = (
     <div className="stack-small">
-      <div className="checkbox-done">
-        <input
-          id={id}
-          type="checkbox"
-          defaultChecked={!isDone}
-          onChange={() => handleToggleButtonClick()}
-        />
-        <label className="todo-label" htmlFor={id}>
-          Mark to do as done
-        </label>
-        <div className="task-content">{name}</div>
-      </div>
+      <input
+        id={id}
+        type="checkbox"
+        defaultChecked={!isDone}
+        onChange={() => handleToggleButtonClick()}
+      />
+      <label className="todo-label" htmlFor={id}>
+        Mark as done
+      </label>
+      <div className="task-content">{name}</div>
+
       <div className="btn-group">
         <button type="button" className="btn" onClick={() => setEditing(true)}>
           Edit
         </button>
-        {/* <TiDeleteOutline
-          title="Delete"
-          size="1.5em"
-          className="ToDoItem--delete"
-          onClick={handleDeleteButtonClick}
-        /> */}
+
         <button
           type="button"
           className="btn todo-cancel"
           onClick={handleDeleteButtonClick}
         >
-          Cancel
+          Delete
         </button>
       </div>
     </div>
@@ -104,19 +97,3 @@ function ToDoItem({
   );
 }
 export default ToDoItem;
-
-/* //   <TiDeleteOutline 
-//     title="Delete"
-//     size="1.5em"
-//     className="ToDoItem--delete"
-//     onClick={handleDeleteButtonClick}
-//   />
-//   <div className="ToDoItem--content">
-//     <div className={`Task ${toDosForDone}`}>
-//       {isDone ? `${name} is pending` : `${name} is done`}
-//     </div>
-//   </div>
-//   <button className="ToDoItem--button" onClick={handleToggleButtonClick}>
-//     {isDone ? "Pending" : "Done"}
-//   </button>
- */

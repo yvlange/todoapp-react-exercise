@@ -5,11 +5,20 @@ import "./styles/ToDoItem.css";
 import "./styles/Footer.css";
 import Header from "./components/Header";
 import ToDoList from "./components/ToDoList";
-
+import FilterButton from "./components/FilterButton";
 import { useState } from "react";
+
+const FILTER_MAP = {
+  All: () => true,
+  Pending: (taskName) => !taskName.isDone,
+  Finished: (taskName) => taskName.isDone,
+};
+
+const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App() {
   const [toDoItems, setToDoItems] = useState([]);
+  const [filter, setFilter] = useState("All");
 
   function handleToDoAdd(taskName) {
     const newToDo = [
@@ -19,6 +28,15 @@ function App() {
     console.log(newToDo);
     setToDoItems(newToDo);
   }
+
+  const filterList = FILTER_NAMES.map((taskName) => (
+    <FilterButton
+      key={taskName}
+      name={taskName}
+      isPressed={taskName.isPressed === filter}
+      setFilter={setFilter}
+    />
+  ));
 
   function handleToDoToggle(name) {
     const newToDo = toDoItems.map((task) => {
@@ -61,6 +79,12 @@ function App() {
         handleToDoToggle={handleToDoToggle}
         handleToDoEdit={handleToDoEdit}
       />
+      <div className="FilterButtons">
+        {filterList}
+        {/* <FilterButton name="All" />
+        <FilterButton name="Pending" />
+        <FilterButton name="Finished" /> */}
+      </div>
     </div>
   );
 }

@@ -12,28 +12,6 @@
   background-color: #e3e9e7;
 }
 
-/* .ToDoItem--content {
-  display: flex;
-  align-content: center;
-  padding: 10px;
-  margin: 10px;
-} */
-
-/* .ToDoItem button:last-child {
-  cursor: pointer;
-  background-color: #fdc0d0;
-  color: #f20587;
-  border-color: #f20587;
-  border-radius: 20px;
-  height: 50px;
-  width: 50px;
-  font-size: 12px;
-}
-
-.ToDoItem button:last-child:hover {
-  background-color: #f1ced8;
-} */
-
 .ToDoItem--delete {
   color: #f20587;
   cursor: pointer;
@@ -43,10 +21,6 @@
 .ToDoItem--done {
   color: rgb(36, 201, 238);
 }
-
-/* .ToDoItem--pending {
-  color: #f20587;
-} */
 
 .btn-group {
   display: flex;
@@ -71,13 +45,9 @@
   justify-content: space-around;
 }
 
-.checkbox-done {
-  padding: 10px;
-}
-
 .task-content {
   text-align: center;
-  padding: 5px;
+  padding-top: 10px;
 }
 
 .todo-text {

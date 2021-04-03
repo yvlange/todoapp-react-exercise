@@ -14,3 +14,14 @@
   min-width: 320px;
   max-width: 60vh;
 }
+
+.FilterButtons {
+  grid-row: footer;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 100vh;
+  left: 20px;
+  width: 370px;
+  height: 60px;
+}
