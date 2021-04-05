@@ -25,7 +25,7 @@ function App() {
       ...toDoItems,
       { id: taskName.id, name: taskName, isDone: true },
     ];
-    console.log(newToDo);
+
     setToDoItems(newToDo);
   }
 
@@ -46,7 +46,6 @@ function App() {
           isDone: !task.isDone,
         };
       } else {
-        console.log(task);
         return task;
       }
     });

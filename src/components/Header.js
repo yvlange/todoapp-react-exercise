@@ -1,7 +1,6 @@
 function Header({ onAddToDo }) {
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Form submitted");
     const form = event.target;
     onAddToDo(form.taskName.value);
 
