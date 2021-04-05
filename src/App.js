@@ -10,8 +10,8 @@ import { useState } from "react";
 
 const FILTER_MAP = {
   All: () => true,
-  Pending: (taskName) => !taskName.isDone,
-  Finished: (taskName) => taskName.isDone,
+  Pending: (task) => !task.isDone,
+  Finished: (task) => task.isDone,
 };
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
@@ -29,11 +29,11 @@ function App() {
     setToDoItems(newToDo);
   }
 
-  const filterList = FILTER_NAMES.map((taskName) => (
+  const filterList = FILTER_NAMES.map((task) => (
     <FilterButton
-      key={taskName}
-      name={taskName}
-      isPressed={taskName.isPressed === filter}
+      key={task}
+      name={task}
+      isPressed={task.isPressed === filter}
       setFilter={setFilter}
     />
   ));
