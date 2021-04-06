@@ -29,15 +29,6 @@ function App() {
     setToDoItems(newToDo);
   }
 
-  const filterList = FILTER_NAMES.map((task) => (
-    <FilterButton
-      key={task}
-      name={task}
-      isPressed={task.isPressed === filter}
-      setFilter={setFilter}
-    />
-  ));
-
   function handleToDoToggle(name) {
     const newToDo = toDoItems.map((task) => {
       if (task.name === name) {
@@ -69,20 +60,47 @@ function App() {
     setToDoItems(editedToDoList);
   }
 
+  function handleFilterPendingClick() {
+    setFilter("Pending");
+  }
+  function handleFilterFinishedClick() {
+    setFilter("Finished");
+  }
+
+  function handleFilterAllClick() {
+    setFilter("All");
+  }
+
+  function getTodosByFilter() {
+    if (filter === "Pending") {
+      const filteredTodos = toDoItems.filter((todoItem) => {
+        return todoItem.isDone === true;
+      });
+
+      return filteredTodos;
+    } else if (filter === "Finished") {
+      const filteredTodos = toDoItems.filter((todoItem) => {
+        return todoItem.isDone === false;
+      });
+      return filteredTodos;
+    } else {
+      return toDoItems;
+    }
+  }
+
   return (
     <div className="App">
       <Header onAddToDo={handleToDoAdd} />
       <ToDoList
-        toDoItems={toDoItems}
+        toDoItems={getTodosByFilter()}
         handleToDoRemove={handleToDoRemove}
         handleToDoToggle={handleToDoToggle}
         handleToDoEdit={handleToDoEdit}
       />
       <div className="FilterButtons">
-        {filterList}
-        {/* <FilterButton name="All" />
-        <FilterButton name="Pending" />
-        <FilterButton name="Finished" /> */}
+        <FilterButton name="All" onClick={handleFilterAllClick} />
+        <FilterButton name="Pending" onClick={handleFilterPendingClick} />
+        <FilterButton name="Finished" onClick={handleFilterFinishedClick} />
       </div>
     </div>
   );

@@ -1,11 +1,6 @@
-function FilterButton({ name, isPressed, setFilter }) {
+function FilterButton({ name, onClick }) {
   return (
-    <button
-      type="button"
-      className="btn toggle-btn"
-      aria-pressed={isPressed}
-      onClick={() => setFilter(name)}
-    >
+    <button type="button" className="btn toggle-btn" onClick={onClick}>
       <span>{name}</span>
     </button>
   );
