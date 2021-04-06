@@ -1,3 +1,5 @@
+import "../styles/Footer.css";
+
 function FilterButton({ name, onClick }) {
   return (
     <button type="button" className="btn toggle-btn" onClick={onClick}>
@@ -6,5 +8,3 @@ function FilterButton({ name, onClick }) {
   );
 }
 export default FilterButton;
-
-//onclick doesn't work..

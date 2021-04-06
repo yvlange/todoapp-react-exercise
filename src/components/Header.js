@@ -1,3 +1,5 @@
+import "../styles/Header.css";
+
 function Header({ onAddToDo }) {
   function handleSubmit(event) {
     event.preventDefault();

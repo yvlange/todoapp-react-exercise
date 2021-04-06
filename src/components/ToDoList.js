@@ -1,4 +1,5 @@
 import ToDoItem from "./ToDoItem";
+import "../styles/ToDoList.css";
 
 function ToDoList({
   toDoItems,
@@ -23,5 +24,3 @@ function ToDoList({
   return <main className="ToDoList">{renderToDos()}</main>;
 }
 export default ToDoList;
-
-// .filter(FILTER_MAP[filter])
