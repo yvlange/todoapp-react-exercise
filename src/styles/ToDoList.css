@@ -1,0 +1,16 @@
+.ToDoList {
+  grid-row: content;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: scroll;
+  padding-top: 1em;
+  background: rgb(171, 170, 194);
+  background: linear-gradient(
+    0deg,
+    rgba(171, 170, 194, 1) 0%,
+    rgba(192, 232, 218, 1) 40%,
+    rgba(127, 216, 235, 1) 100%
+  );
+  position: relative;
+}
